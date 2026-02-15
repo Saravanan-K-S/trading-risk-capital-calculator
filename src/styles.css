@@ -75,6 +75,37 @@ h2 {
   margin: 0 0 8px;
 }
 
+.results-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.view-toggle {
+  display: inline-flex;
+  border: 1px solid #2f353d;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.view-button {
+  border: 0;
+  border-right: 1px solid #2f353d;
+  border-radius: 0;
+  padding: 6px 10px;
+}
+
+.view-button:last-child {
+  border-right: 0;
+}
+
+.view-button.active {
+  color: #0e1117;
+  background: #58a6ff;
+}
+
 .card-title {
   margin: 0;
 }
@@ -115,6 +146,53 @@ h2 {
 
 .field {
   min-width: 0;
+}
+
+.result-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 10px;
+}
+
+.result-card-item {
+  background: #161b22;
+  border: 1px solid #2f353d;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.result-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  color: #9da7b3;
+}
+
+.result-card-top strong {
+  font-weight: 800;
+  font-size: 18px;
+  color: #e6edf3;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px 12px;
+}
+
+.result-grid > div {
+  padding: 8px;
+  border: 1px solid #2f353d;
+  border-radius: 8px;
+  background: #111826;
+}
+
+.metric-label {
+  display: block;
+  color: #9da7b3;
+  font-size: 12px;
+  margin-bottom: 2px;
 }
 
 .table-wrap {
@@ -188,6 +266,15 @@ th {
 @media (max-width: 768px) {
   .form-grid {
     grid-template-columns: 1fr;
+  }
+
+  .result-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .results-head {
+    align-items: flex-start;
+    flex-direction: column;
   }
 
   .table-wrap {
