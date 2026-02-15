@@ -95,3 +95,11 @@ th {
   color: #9da7b3;
   font-size: 13px;
 }
+
+@media (max-width: 768px) {
+  th,
+  td {
+    padding: 8px;
+    font-size: 13px;
+  }
+}

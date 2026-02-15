@@ -14,6 +14,9 @@ export default function ResultsTable({ rows }: ResultsTableProps) {
             <th>SL %</th>
             <th>Capital (₹)</th>
             <th>Quantity</th>
+            <th>SL</th>
+            <th>TP1</th>
+            <th>TP2</th>
           </tr>
         </thead>
         <tbody>
@@ -22,6 +25,9 @@ export default function ResultsTable({ rows }: ResultsTableProps) {
               <td>{row.sl}%</td>
               <td>₹ {formatNumber(row.capital)}</td>
               <td>{row.quantity}</td>
+              <td>₹ {formatNumber(row.slPrice)}</td>
+              <td>₹ {formatNumber(row.tp1Price)}</td>
+              <td>₹ {formatNumber(row.tp2Price)}</td>
             </tr>
           ))}
         </tbody>
